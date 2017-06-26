@@ -11,22 +11,55 @@
     android:backgroundTint="@android:color/black">
 
 
-    <ListView
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:background="@android:color/black"
-       android:id="@+id/songslistView"
-       android:layout_width="match_parent"
-       android:layout_height="@dimen/_350sdp"/>
+        android:id="@+id/recyclerView"
+      />
+
+
+    <!--<ListView-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@android:color/black"-->
+       <!--android:id="@+id/songslistView"-->
+       <!--android:layout_width="match_parent"-->
+       <!--android:layout_height="@dimen/_350sdp"/>-->
+<LinearLayout
+    android:background="#1b1111"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <SeekBar
         android:id="@+id/seekbar"
         android:layout_margin="@dimen/_5sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/txttime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+</LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:text="00:00"
+            android:layout_marginLeft="@dimen/_18sdp"
+            android:id="@+id/txttimestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+
+            android:text="00:00"
+            android:layout_marginLeft="@dimen/_200sdp"
+            android:id="@+id/txttimeend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
 
     <LinearLayout
+        android:padding="@dimen/_10sdp"
         android:background="@android:color/black"
         android:layout_margin="@dimen/_5sdp"
         android:weightSum="3"
